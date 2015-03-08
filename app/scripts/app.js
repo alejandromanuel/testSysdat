@@ -1,11 +1,7 @@
 'use strict';
 
 /**
- * @ngdoc overview
- * @name mytodoApp
- * @description
- * # mytodoApp
- *
+ *Cuando haces unareferncia este modulo lo coje y llama el view que es es necesario y el controller que es necesario
  * Main module of the application.
  */
 angular
@@ -20,7 +16,7 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'views/home.html',
         controller: 'MainCtrl'
       })
       .when('/profile', {

@@ -3,87 +3,106 @@
   <head>
     <meta charset="utf-8">
     <title>CREST UPRM</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Capstone Project-Computer Enginering UPRM">
     
-    <!-- bower:css -->
+    
+    <!-- component-> bootstrap -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <!-- endbower -->
+    <!-- endcomponent-->
     
-    <!-- build:css(.tmp) styles/main.css -->
+    <!-- ccs-> styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+    <!-- endcss-->
 
-
+      <!-- tyle for navbar -->
        <style type="text/css">
           .navbar-custom {
-                    color: white;
+                    
                     background-color: #606060;
                   } 
-
-    </style>
+       </style>
+       <!--  endstyle-->
   </head>
 
   <body ng-app="SysdatApp">
     
-    
+    <!--
+       custom: for custom style
+       default: characteristics from the default style
+       fixed-top: goes top of the page charateristic
+  -->
     <nav class="navbar navbar-custom navbar-default navbar-fixed-top ">
 
       <div class="container-fluid">
+        <!--Logo-->
         <div class="navbar-header">
-          <a class="navbar-brand" href="#"><img src="images/Sysdat1.png"></a>
+           <a href="">
+
+            <img src="images/Sysdat3.png"> </a>
         </div>
+        <!--endlogo-->
+        <!--collapse class: space between components-->
         <div id="navbar" class="collapse navbar-collapse ">
          
-
+         <!--
+                 nav: bootsrap class, go to bootstrap.css to customize
+                 left: to take padding characteristics
+       -->
           <ul class="nav navbar-nav navbar-left">
+
             <li ng-class="{active: main.active.tab == 'profile'}">
-              <a ng-click='main.active.tab = "profile"'ng-href="#" style="color:white;">Profile</a>
+                 <a ng-click='main.active.tab = "profile"'ng-href="#/profile" style="margin-top:1px;">Profile</a>
             </li>
             <li ng-class="{active: main.active.tab == 'members'}">
-              <a  ng-click='main.active.tab = "members"' ng-href="#/profile" style="color:white;">Members</a>
+                 <a  ng-click='main.active.tab = "members"' ng-href="#/members" style="margin-top:1px;">Members</a>
             </li>
-            <li >
-              <a ng-click='main.active.tab = "Activities"' ng-href="#" style="color:white;">Activities</a>
+            <li>
+                 <a ng-click='main.active.tab = "Activities"' ng-href="#" style="margin-top:1px;">Activities</a>
             </li>
-            <li >
-              <a ng-click='main.active.tab = "Notiifications"' ng-href="#" style="color:white;">Notifications
-                <span class="badge">2</span></a>
+            <li>
+                 <a ng-click='main.active.tab = "Notiifications"' ng-href="#" style="margin-top:1px;">Notifications
+                           <span class="badge">2</span></a>
             </li>
-            <li >
-              <a ng-click='main.active.tab = "Reports Manager"' ng-href="#" style="color:white;">Reports Manager</a>
+            <li>
+                 <a ng-click='main.active.tab = "Reports Manager"' ng-href="#" style="margin-top:1px;">Reports Manager</a>
             </li>
 
-            <li >
-              <a ng-click='main.active.tab = "Progress Reports"' ng-href="#" style="color:white;">Progress Reports</a>
+            <li>
+                 <a ng-click='main.active.tab = "Progress Reports"' ng-href="#" style="margin-top:1px;">Progress Reports</a>
             </li>
           </ul>
-
+            <!-- end left menu-->
+            <!--
+                 nav: bootsrap class, go to bootstrap.css to customize
+                 right: to take padding characteristics
+             -->  
           <ul class="nav navbar-nav navbar-right">
             <li >
-              <a  style="color:white;"><em>Juanillo Alealealejandro </em></a>
+                 <a  style="color:white;margin-top:1px;"><em>Juanillo Alealealejandro </em></a>
             </li>
-            <li ng-class="{active: main.active.tab == 'home'}">
-
-            <img src="images/not.png"> <span class="badge">2</span>
-            </li>
-           <li >
-              <a  ng-click='main.active.tab = "profile"' ng-href="#" style="color:white;">Logout</a>
+            <li>
+                 <a href="">
+                 <img src="images/not1.png" style="height:100%; margin-top:-8px;"> <span class="badge">2</span></a>
             </li>
             <li >
-              <a ng-click='main.active.tab = "profile"' ng-href="#/profile" style="color:white;"> Help</a>
+                 <a  ng-click='main.active.tab = "profile"' ng-href="#" style="margin-top:1px;">Logout</a>
+            </li>
+            <li >
+                 <a ng-click='main.active.tab = "profile"' ng-href="#/profile" style="margin-top:1px;"> Help</a>
             </li>
           </ul>
+          <!-- end right menu-->
         </div>
       </div>
     </nav>
   
-
+<!-- second menu-->
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-2 col-md-2 sidebar">
+
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
             <li><a href="#">Edit Profile</a></li>
             <li><a href="#">Search Member</a></li>
             <li><a href="#">Add Members</a></li>
