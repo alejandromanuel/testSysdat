@@ -1,39 +1,37 @@
-var app = angular.module('SysdatApp', ['ngRoute']);
- 
-// routes
-app.config(function($routeProvider) {
+'use strict';
+
+/**
+ * @ngdoc overview
+ * @name mytodoApp
+ * @description
+ * # mytodoApp
+ *
+ * Main module of the application.
+ */
+angular
+  .module('SysdatApp', [
+    'ngAnimate',
+    'ngCookies',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'ngTouch'
+  ])
+  .config(function ($routeProvider) {
     $routeProvider
- 
-        // route for the home page
-        .when('/', {
-            templateUrl : 'views/contact.html',
-            controller  : 'mainController'
-        })
- 
-        // route for the about page
-        .when('/about', {
-            templateUrl : 'views/about.html',
-            controller  : 'aboutController'
-        })
- 
-        // route for the service page
-        .when('/main', {
-            templateUrl : 'views/main.html',
-            controller  : 'serviceController'
-        });
- 
-});
- 
-// create the controller and inject Angular's $scope
-app.controller('mainController', function($scope) {
-    // create a message to display in our view
-    $scope.info = 'Welcome to Oodles';
-});
- 
-app.controller('aboutController', function($scope) {
-    $scope.info = 'About Oodles';
-});
- 
-app.controller('serviceController', function($scope) {
-    $scope.info = 'Service';
-});
+      .when('/', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl'
+      })
+      .when('/profile', {
+        templateUrl: 'views/profile.html',
+        controller: 'ProfileCtrl'
+      })
+      .when('/members', {
+        templateUrl: 'views/members.html',
+        controller: 'MembersCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+  });

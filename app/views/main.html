@@ -1,15 +1,23 @@
-<div class="jumbotron">
-    <p>{{ info }}</p>
-</div>
 <div class="container">
-<div class="row">
-<div class="col-md-4">
-<h2>Main</h2>
-<p>
-  Donec id elit non mi porta gravida at eget metus.
-</p>
-<p><a class="btn  btn-success" href="#" role="button">View details »</a>
-   
-</p></div></div>
-   
+  <h2>Example Form</h2>
+
+    <!-- Todos input -->
+  <form role="form" ng-submit="addTodo()">
+    <div class="row">
+      <div class="input-group">
+        <input type="text" ng-model="todo" placeholder="What needs to be done?" class="form-control">
+        <span class="input-group-btn">
+          <input type="submit" class="btn btn-success" value="Add">
+        </span>
+      </div>
+    </div>
+
+    <!-- Todos list -->
+    <div class="jumbotron">
+    <p class="form-group" ng-repeat="todo in todos">
+      <input type="text" ng-model="todo" class="form-control">
+    </p>
+  </div>
+  </form>
+  
 </div>
