@@ -7,8 +7,8 @@
  * # AboutCtrl
  * Controller of the mytodoApp
  */
-angular.module('SysdatApp')
-  .controller('ProfileCtrl', function ($scope) {
+angular.module('SysdatApp');
+ .controller('ProfileCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
